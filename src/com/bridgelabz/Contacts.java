@@ -78,4 +78,10 @@ public class Contacts {
     public void setContactNum(String contactNum) {
         this.contactNum = contactNum;
     }
+    
+    public String toString() {
+        return ("\nFirstName:- " + firstName + "\nLastName:- " + lastName + "\nAddress:- " + address + "\nCity:- " + city + "\nState:- " + state +
+                "\nZip code:- " + zip + "\nContact Number:- " + contactNum + "\nEmail ID:- " + email);
+    }
+
 }
