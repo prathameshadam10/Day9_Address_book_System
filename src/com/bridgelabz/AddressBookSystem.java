@@ -48,15 +48,85 @@ public class AddressBookSystem {
         System.out.println(contactsDetails);
     }
 
+    public void edit(){
+//        edit personal Details
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the no of person");
+        int sr = sc.nextInt();
+        System.out.println("For Update: ");
+        System.out.println("a)First Name \n b)Last Name \n c)Mobile Number \n d)Address \n e)City \n f) State \n g)Zip \n h)EmailID");
+        char update = sc.next().charAt(0);
+        switch(update){
+            case 'a' : {
+                String updated = sc.nextLine();
+                String FirstName = updated;
+                System.out.println("First Name Updated...");
+                break;
+
+            }
+            case 'b' : {
+                String updated = sc.nextLine();
+                String LastName = updated;
+                System.out.println("Last name updated...");
+                break;
+            }
+            case 'c' : {
+                String updated = sc.nextLine();
+                String MobileNumber = updated;
+                System.out.println("Address updates...");
+                break;
+
+            }
+            case 'd' : {
+                String updated = sc.nextLine();
+                String Address = updated;
+                System.out.println("Address updated...");
+                break;
+            }
+            case 'e' : {
+                String updated = sc.nextLine();
+                String City = updated;
+                System.out.println("City Updated...");
+                break;
+            }
+            case 'f' : {
+                String updated = sc.nextLine();
+                String State = updated;
+                System.out.println("State updated...");
+                break;
+            }
+            case 'g' : {
+                String updated = sc.nextLine();
+                String Zip = updated;
+                System.out.println("Zip updated...");
+                break;
+            }
+            case 'h' : {
+                String updated = sc.nextLine();
+                String EmailID = updated;
+                System.out.println("EmailID updated...");
+                break;
+            }
+            default:{
+                System.out.println("No Changes");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Address book system project !!!!=");
 
         AddressBookSystem person1 = new AddressBookSystem();
         person1.addDetails();
         person1.displayContacts();
-
+        person1.edit();
+        AddressBookSystem person2 = new AddressBookSystem();
+        person2.addDetails();
+        person2.displayContacts();
+        person2.edit();
 
 
     }
 }
+
 
