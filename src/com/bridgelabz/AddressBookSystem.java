@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class AddressBookSystem {
@@ -112,6 +113,16 @@ public class AddressBookSystem {
             }
         }
     }
+//    method that delete a user resource
+    public void deleteContact(){
+        Iterator<Contacts> contactDt = contactsDetails.iterator();
+        while (contactDt.hasNext()){
+            Contacts contacts = contactDt.next();
+            contactDt.remove();
+        }
+        System.out.println("contacts removed");
+        displayContacts();
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Address book system project !!!!=");
@@ -124,7 +135,7 @@ public class AddressBookSystem {
         person2.addDetails();
         person2.displayContacts();
         person2.edit();
-
+        person2.deleteContact();
 
     }
 }
